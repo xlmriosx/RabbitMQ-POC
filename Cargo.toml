@@ -1,0 +1,25 @@
+[package]
+name = "rabbitmq-rust-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7"
+lapin = "2.5.3"
+tokio = { version = "1.38", features = ["full"] }
+tokio-stream = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dotenvy = "0.15"
+
+[[bin]]
+name = "rabbitmq-rust-api"
+path = "src/main.rs"
+
+[[bin]]
+name = "producer"
+path = "src/producer.rs"
+
+[[bin]]
+name = "consumer"
+path = "src/consumer.rs"
